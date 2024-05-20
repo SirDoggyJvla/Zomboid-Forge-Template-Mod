@@ -10,7 +10,10 @@ At the end of the day, it's your creativity that matters and my framework is mos
 - [Table of Contents](#table-of-contents)
 - [Mod template and external links / tools](#mod-template-and-external-links--tools)
 - [Creating a zombie type](#creating-a-zombie-type)
-- [Generic information about a zombie name](#generic-information-about-a-zombie-name)
+- [Base informations](#base-informations)
+  - [Name of the zombie](#name-of-the-zombie)
+- [Nametag color](#nametag-color)
+- [Spawn weight](#spawn-weight)
 - [Setting a ZType stats](#setting-a-ztype-stats)
   - [Generic stats](#generic-stats)
   - [Health stat](#health-stat)
@@ -28,7 +31,7 @@ A zombie type within the framework is usually referenced as **ZType**. They are 
 
 Let's consider a first example of custom zombie being a very strong zombie with max stats and nothing else special about it. The key associated to this zombie will be `StrongZomboid`.
 
-Our ZType is added to the table `ZomboidForge.ZTypes` which can be accessed by importing the Zomboid Forge `module`:
+Our ZType is added to the table `ZomboidForge.ZTypes` which can be accessed by importing the Zomboid Forge `module` within a Lua file in `media/lua/client/filename.lua` (in the template: `ZF_Template.lua`):
 ```lua
 local ZomboidForge = require "ZomboidForge_module"
 
@@ -56,8 +59,49 @@ Events.OnGameStart.Add(Initialize_ZF_Template)
 The framework will access the ZType data whenever it needs to do actions with them like update the zombie stats which is done every 10 seconds for less than ~400 zombies. This means at anytime, you can write a function that will modify the ZType data. You can definitely find a use for that but the most used is probably just adding new functions after defining the data, like for later access with sandbox options (this is detailed in a later section).
 
 
-# Generic information about a zombie name
+# Base informations
 
+In this part I will define data keys you can use to set the name of a zombie and it's spawn weight.
+
+## Name of the zombie
+A nametag is displayed above a zombie if the sandbox options were set to allow it or a client allows it within its mod options. The way this is done is by adding a `name ` key to our ZType data:
+```lua
+ZType_data = {
+    ...
+    name = "Strong Zomboid",
+    ...
+}
+```
+`name` needs to be a string and in this case we've set it to `Strong Zomboid` which will be the nametag of the zombie. But you can utilize the translation system of Project Zomboid by defining a name within `media/lua/shared/Translate/language/IG_UI_language.txt`. For example:
+```lua
+-- media/lua/shared/Translate/EN/IG_UI_EN.txt
+IGUI_EN = {
+    -- Template Zomboids names
+	IGUI_ZF_StrongZomboid = "Strong Zomboid",
+}
+```
+```lua
+-- media/lua/shared/Translate/FR/IG_UI_FR.txt
+IGUI_FR = {
+    -- Noms des Zomboids modèles
+	IGUI_ZF_StrongZomboid = "Zomboid Fort",
+}
+```
+And by defining `name` this way:
+```lua
+-- back to the .lua file
+ZType_data = {
+    ...
+    name = "IGUI_ZF_StrongZomboid",
+    ...
+}
+```
+The framework will retrieve the name of the zombie by utilizing `IGUI_ZF_StrongZomboid`. 
+
+# Nametag color
+
+
+# Spawn weight
 
 
 # Setting a ZType stats
