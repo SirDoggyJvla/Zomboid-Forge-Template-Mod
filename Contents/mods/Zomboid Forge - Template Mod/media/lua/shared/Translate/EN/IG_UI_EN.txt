@@ -1,0 +1,4 @@
+IGUI_EN = {
+    -- Template Zomboids names
+	IGUI_ZF_StrongZomboid = "Strong Zomboid",
+}

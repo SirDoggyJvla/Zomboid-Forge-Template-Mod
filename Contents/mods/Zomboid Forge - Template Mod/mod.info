@@ -1,0 +1,10 @@
+id=ZomboidForge_template
+name=Zomboid Forge - Template Mod
+description=Zomboid Forge is a Project Zomboid framework that modders can use to easily implement zombie types that are compatible with each others. This mod is a template to show how to use the framework and what can be done with it.
+poster=poster.png
+authors=SirDoggyJvla
+icon=icon.png
+tags=Build 41,Zomboid,Forge,Zombies,Framework,Template,Example
+url=https://ko-fi.com/sirdoggyjvla
+versionMin=41.0
+require=00AccessibleFields,ZomboidForge
