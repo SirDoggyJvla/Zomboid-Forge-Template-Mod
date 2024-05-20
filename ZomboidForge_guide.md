@@ -72,7 +72,7 @@ ZType_data = {
     ...
 }
 ```
-`name` needs to be a string and in this case we've set it to `Strong Zomboid` which will be the nametag of the zombie. But you can utilize the translation system of Project Zomboid by defining a name within `media/lua/shared/Translate/language/IG_UI_language.txt`. For example:
+`name` needs to be a `string` and in this case we've set it to `Strong Zomboid` which will be the nametag of the zombie. But you can utilize the translation system of Project Zomboid by defining a name within `media/lua/shared/Translate/language/IG_UI_language.txt`. For example:
 ```lua
 -- media/lua/shared/Translate/EN/IG_UI_EN.txt
 IGUI_EN = {
