@@ -23,6 +23,10 @@ local function Initialize_ZF_Template()
 			name = "IGUI_ZF_StrongZomboid",
 			chance = SandboxVars.ZF_Template.StrongZomboid_SpawnWeight,
 
+			-- UI
+			color = {255, 0, 255,},
+			outline = {0, 0, 0,},
+
 			-- stats
 			walktype = 1,
 			strength = 1,
@@ -32,22 +36,6 @@ local function Initialize_ZF_Template()
 			sight = 1,
 			hearing = 1,
 			HP = 20,
-
-			-- UI
-			color = {255, 0, 255,},
-			outline = {0, 0, 0,},
-
-			-- attack functions
-			zombieAgro = {},
-			zombieOnHit = {},
-
-			-- custom behavior
-			zombieDeath = {},
-			customBehavior = {},
-
-			customData = {
-				"SetRunnerSounds",
-			},
 		}
 	end
 end
