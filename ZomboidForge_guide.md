@@ -12,11 +12,13 @@ At the end of the day, it's your creativity that matters and my framework is mos
 - [Creating a zombie type](#creating-a-zombie-type)
 - [Base informations](#base-informations)
   - [Name of the zombie](#name-of-the-zombie)
-- [Nametag color](#nametag-color)
-- [Spawn weight](#spawn-weight)
+  - [Nametag color](#nametag-color)
+  - [Spawn weight](#spawn-weight)
 - [Setting a ZType stats](#setting-a-ztype-stats)
   - [Generic stats](#generic-stats)
   - [Health stat](#health-stat)
+- [Available tags](#available-tags)
+  - [Clothing visuals](#clothing-visuals)
 
 # Mod template and external links / tools
 The full Zomboid Forge project is available on Github:
@@ -98,10 +100,10 @@ ZType_data = {
 ```
 The framework will retrieve the name of the zombie by utilizing `IGUI_ZF_StrongZomboid`. 
 
-# Nametag color
+## Nametag color
 
 
-# Spawn weight
+## Spawn weight
 
 
 # Setting a ZType stats
@@ -153,3 +155,81 @@ ZType_data = {
 }
 ```
 
+# Available tags
+## Clothing visuals
+
+Probably need a better way of showing those
+| List of body locations |
+| ---------------------- |
+| Wound                  |
+| BeltExtra              |
+| Belt                   |
+| BellyButton            |
+| MakeUp_FullFace        |
+| MakeUp_Eyes            |
+| MakeUp_EyesShadow      |
+| MakeUp_Lips            |
+| Mask                   |
+| MaskEyes               |
+| MaskFull               |
+| Underwear              |
+| UnderwearBottom        |
+| UnderwearTop           |
+| UnderwearExtra1        |
+| UnderwearExtra2        |
+| Hat                    |
+| FullHat                |
+| Ears                   |
+| EarTop                 |
+| Nose                   |
+| Torso1                 |
+| Torso1Legs1            |
+| TankTop                |
+| Tshirt                 |
+| ShortSleeveShirt       |
+| LeftWrist              |
+| RightWrist             |
+| Shirt                  |
+| Neck                   |
+| Necklace               |
+| Necklace_Long          |
+| Right_MiddleFinger     |
+| Left_MiddleFinger      |
+| Left_RingFinger        |
+| Right_RingFinger       |
+| Hands                  |
+| HandsLeft              |
+| HandsRight             |
+| Socks                  |
+| Legs1                  |
+| Pants                  |
+| Skirt                  |
+| Legs5                  |
+| Dress                  |
+| BodyCostume            |
+| Sweater                |
+| SweaterHat             |
+| Jacket                 |
+| Jacket_Down            |
+| Jacket_Bulky           |
+| JacketHat              |
+| JacketHat_Bulky        |
+| JacketSuit             |
+| FullSuit               |
+| Boilersuit             |
+| FullSuitHead           |
+| FullTop                |
+| BathRobe               |
+| Shoes                  |
+| FannyPackFront         |
+| FannyPackBack          |
+| AmmoStrap              |
+| TorsoExtra             |
+| TorsoExtraVest         |
+| Tail                   |
+| Back                   |
+| LeftEye                |
+| RightEye               |
+| Eyes                   |
+| Scarf                  |
+| ZedDmg                 |
